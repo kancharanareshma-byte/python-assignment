@@ -19,7 +19,7 @@ class Student:
     def calculate_fee_balance(self):
         return (self.total_fee - self.fee_paid)
     def print_studentdetails(self):
-        print("ID:", self.sid)
+        print("Student ID:", self.sid)
         print("Name:", self.name)
         print("CGPA:", round(self.calculate_cgpa(), 2))
         print("Age:", self.calculate_age())
