@@ -1,3 +1,29 @@
+class Student:
+    def __init__(self, sid, name, m1, m2, m3, birth_year, fee_paid):
+        self.sid = sid
+        self.name = name
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+        self.birth_year = birth_year
+        self.fee_paid = fee_paid
+        self.total_fee = 50000
+
+    def calculate_cgpa(self):
+        avg = (self.m1 + self.m2 + self.m3) / 3
+        return (avg / 10)
+
+    def calculate_age(self):
+        return (2026 - self.birth_year)
+
+    def calculate_fee_balance(self):
+        return (self.total_fee - self.fee_paid)
+    def print_studentdetails(self):
+        print("ID:", self.sid)
+        print("Name:", self.name)
+        print("CGPA:", round(self.calculate_cgpa(), 2))
+        print("Age:", self.calculate_age())
+        print("Fee Balance:", self.calculate_fee_balance())
 class College:
     def __init__(self, code, name, location, s1, s2, s3):
         self.college_code = code
